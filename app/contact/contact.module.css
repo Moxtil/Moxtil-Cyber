@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Edu+QLD+Beginner:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap");
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  gap: 12px;
+  font-family: "Poppins", sans-serif;
+}
+.container div > h1 {
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+.container div > p {
+  margin-top: 20px;
+  color: #777;
+}
+.container div img {
+  transform: translate(-20px, 30px);
+}
+.contactCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+.contactCards div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+  padding: 6px;
+  background-color: #ebeaea;
+  height: 225px;
+  box-shadow: 0 0 9px #333;
+  border-radius: 10px;
+  width: 100%;
+}
+.contactCards div svg {
+  font-size: 28px;
+}
+.contactCards div h3 {
+  font-size: 25px;
+}
+.contactCards div p {
+  font-size: 15px;
+  color: #777;
+}
+.contactCards div span {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+.contactCards div button {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #1c1c1c 0%, #424242 100%);
+  transition: 0.25s ease all;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: left;
+  transition: background-size 0.25s ease;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  width: 250px;
+  text-transform: uppercase;
+}
+.contactCards div button:hover {
+  box-shadow: 0 0 10px #000;
+  background-size: 100% 100%;
+  color: #fff;
+}
+@media (max-width: 776px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-block: 50px;
+  }
+  .contactCards {
+    flex-direction: column;
+  }
+}

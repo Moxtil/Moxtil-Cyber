@@ -1,0 +1,46 @@
+.mainContainer {
+  padding: 25px 12px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.mainContainer > h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  flex-wrap: wrap;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 200px;
+  max-width: 500px;
+  background-color: #efefef;
+  box-shadow: 0 0 7px #666;
+}
+.item div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  width: 100%;
+}
+.item div:last-child p {
+  font-size: 14px;
+  color: #666;
+}
+.emptyList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  margin: 50px auto;
+}
