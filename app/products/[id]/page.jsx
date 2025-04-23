@@ -120,7 +120,7 @@ export default async function page({ params }) {
                     src={sm?.thumbnail}
                     alt={sm?.title || "Item"}
                     width={300}
-                    height={300}
+                    height={200}
                   />
                 </Link>
                 <p>{sm?.title}</p>

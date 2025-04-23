@@ -39,7 +39,7 @@ const OffersSlider = ({ imgSrc, title, desc }) => {
             "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use."
           }
         </p>
-        <Button title={"Shop Now"} />
+        <Button color={"#333"} border={"2px solid #333"} title={"Shop Now"} />
       </Link>
       <Link href={"/products"} className={styles.offersCarous}>
         <Image src={img2} alt="Shop-Now" width={225} height={225} />
@@ -48,7 +48,7 @@ const OffersSlider = ({ imgSrc, title, desc }) => {
           iPad combines a magnificent 10.2-inch Retina display, incredible
           performance, multitasking and ease of use.
         </p>
-        <Button title={"Shop Now"} />
+        <Button color={"#333"} border={"2px solid #333"} title={"Shop Now"} />
       </Link>
       <Link href={"/products"} className={styles.offersCarous}>
         <Image src={img3} alt="Shop-Now" width={225} height={225} />
@@ -57,7 +57,7 @@ const OffersSlider = ({ imgSrc, title, desc }) => {
           iPad combines a magnificent 10.2-inch Retina display, incredible
           performance, multitasking and ease of use.
         </p>
-        <Button title={"Shop Now"} />
+        <Button color={"#333"} border={"2px solid #333"} title={"Shop Now"} />
       </Link>
       <Link href={"/products"} className={styles.offersCarous}>
         <Image src={img4} alt="Shop-Now" width={225} height={225} />
@@ -66,7 +66,7 @@ const OffersSlider = ({ imgSrc, title, desc }) => {
           iPad combines a magnificent 10.2-inch Retina display, incredible
           performance, multitasking and ease of use.
         </p>
-        <Button title={"Shop Now"} />
+        <Button color={"#333"} border={"2px solid #333"} title={"Shop Now"} />
       </Link>
       <Link href={"/products"} className={styles.offersCarous}>
         <Image src={img5} alt="Shop-Now" width={225} height={225} />
@@ -75,7 +75,7 @@ const OffersSlider = ({ imgSrc, title, desc }) => {
           iPad combines a magnificent 10.2-inch Retina display, incredible
           performance, multitasking and ease of use.
         </p>
-        <Button title={"Shop Now"} />
+        <Button color={"#333"} border={"2px solid #333"} title={"Shop Now"} />
       </Link>
       <Link href={"/products"} className={styles.offersCarous}>
         <Image src={img6} alt="Shop-Now" width={225} height={225} />
@@ -84,7 +84,7 @@ const OffersSlider = ({ imgSrc, title, desc }) => {
           iPad combines a magnificent 10.2-inch Retina display, incredible
           performance, multitasking and ease of use.
         </p>
-        <Button title={"Shop Now"} />
+        <Button color={"#333"} border={"2px solid #333"} title={"Shop Now"} />
       </Link>
     </Carousel>
   );

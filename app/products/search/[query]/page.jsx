@@ -48,12 +48,15 @@ export default async function page({ params }) {
           <Suspense fallback={<div className="loader"></div>}>
             {products.products.map((m) => {
               return (
-                <div className={styles.cardsContainer} key={m?.id}>
+                <div
+                  className={`${styles.cardsContainer} ${styles.searchCard}`}
+                  key={m?.id}
+                >
                   <Link href={`/products/${m?.id}`}>
                     <Image
                       src={m?.thumbnail}
                       alt={m?.title}
-                      width={250}
+                      width={200}
                       height={200}
                     />
                   </Link>
@@ -68,7 +71,12 @@ export default async function page({ params }) {
                       {m?.rating}
                     </p>
                   </div>
-                  <Button title={"Add To Cart"} width={"100%"} />
+                  <Button
+                    title={"Add To Cart"}
+                    width={"100%"}
+                    color={"#333"}
+                    border={"2px solid #333"}
+                  />
                 </div>
               );
             })}

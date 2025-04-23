@@ -10,7 +10,7 @@ export default function ShopCard({ imgSrc, price, title, productId }) {
       <h4>{title}</h4>
       <h3>${price}</h3>
       <Link href={`/products/${productId}`}>
-        <Button title={"Buy Now"} />
+        <Button color={"#333"} title={"Buy Now"} border={"2px solid #333"} />
       </Link>
     </div>
   );

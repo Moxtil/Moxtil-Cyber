@@ -44,6 +44,7 @@
 .container .cardsContainer a img {
   width: 100%;
   aspect-ratio: 1/1;
+  object-fit: contain;
 }
 .container .cardsContainer .cardDesc {
   padding: 10px;
@@ -97,6 +98,7 @@
   margin-inline: 10px;
   min-width: 360px;
   width: 500px;
+  min-height: 300px;
   text-align: center;
   box-shadow: 0 0 7px #777;
   background-color: #f5f1f1;
@@ -105,6 +107,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  height: 100%;
   padding: 12px;
   border: 2px solid #555;
   text-align: center;
@@ -113,6 +116,7 @@
 .itemImg > img {
   width: 100%;
   object-fit: contain;
+  aspect-ratio: 1/1;
 }
 .itemImg .smallImgs {
   width: 100%;
@@ -171,6 +175,8 @@ p.iconed {
   max-width: 500px;
   box-shadow: 0 0 8px #666;
   background-color: #eceaea;
+  height: 350px;
+  width: 350px;
 }
 .similarItem a img {
   width: 100%;
@@ -193,4 +199,10 @@ p.iconed {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.searchCard {
+  max-width: 450px;
+}
+.searchCard img {
+  object-fit: contain;
 }

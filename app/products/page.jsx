@@ -72,58 +72,58 @@ export default function page() {
     fetchAllCategories();
   }, []);
 
-  {
-    !user && <div className="loader"></div>;
-  }
-  return (
-    <div className={styles.mainContainer}>
-      <div className={styles.upperSide}></div>
-      <div className={styles.container}>
-        {products.map((m) => {
-          const isFavorite = favoriteIds.includes(m.id);
+  if (!user) {
+    return <div className="loader"></div>;
+  } else
+    return (
+      <div className={styles.mainContainer}>
+        <div className={styles.upperSide}></div>
+        <div className={styles.container}>
+          {products.map((m) => {
+            const isFavorite = favoriteIds.includes(m.id);
 
-          return (
-            <div className={styles.cardsContainer} key={m?.id}>
-              <div
-                className={styles.cardTop}
-                onClick={async () => {
-                  await toggleFavorite(user, m);
-                  loadFavorites(user); // refresh UI after toggle
-                }}
-              >
-                {isFavorite ? <FaHeart color="red" /> : <FaRegHeart />}
+            return (
+              <div className={styles.cardsContainer} key={m?.id}>
+                <div
+                  className={styles.cardTop}
+                  onClick={async () => {
+                    await toggleFavorite(user, m);
+                    loadFavorites(user); // refresh UI after toggle
+                  }}
+                >
+                  {isFavorite ? <FaHeart color="red" /> : <FaRegHeart />}
+                </div>
+                <Link href={`/products/${m?.id}`}>
+                  <Image
+                    src={m?.thumbnail}
+                    alt={m?.title}
+                    width={250}
+                    height={200}
+                  />
+                </Link>
+                <div className={styles.cardDesc}>
+                  <p>
+                    <FaHashtag />
+                    {m?.title}
+                  </p>
+                  <h3>${m?.price}</h3>
+                  <p>
+                    <IoStarSharp size={22} color="gold" />
+                    {m?.rating}
+                  </p>
+                </div>
+                <div
+                  onClick={() => {
+                    addMyItem(m);
+                    showSuccess();
+                  }}
+                >
+                  <Button title={"Add To Cart"} width={"100%"} />
+                </div>
               </div>
-              <Link href={`/products/${m?.id}`}>
-                <Image
-                  src={m?.thumbnail}
-                  alt={m?.title}
-                  width={250}
-                  height={200}
-                />
-              </Link>
-              <div className={styles.cardDesc}>
-                <p>
-                  <FaHashtag />
-                  {m?.title}
-                </p>
-                <h3>${m?.price}</h3>
-                <p>
-                  <IoStarSharp size={22} color="gold" />
-                  {m?.rating}
-                </p>
-              </div>
-              <div
-                onClick={() => {
-                  addMyItem(m);
-                  showSuccess();
-                }}
-              >
-                <Button title={"Add To Cart"} width={"100%"} />
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
 }

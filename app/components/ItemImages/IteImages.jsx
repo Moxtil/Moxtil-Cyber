@@ -10,10 +10,10 @@ export default function ItemImages({ item }) {
       <Image
         src={mainImg}
         alt={item.title}
-        width={300}
-        height={300}
+        width={250}
+        height={200}
         onClick={() => console.log(item)}
-        style={{ opacity: "1" }}
+        style={{ opacity: "1", objectFit: "contain" }}
       />
       <div className={styles.smallImgs}>
         {item.images?.map((im) => {
@@ -23,8 +23,8 @@ export default function ItemImages({ item }) {
               key={im}
               src={im}
               alt={item.title}
-              width={100}
-              height={100}
+              width={80}
+              height={80}
               style={
                 mainImg == im
                   ? {
