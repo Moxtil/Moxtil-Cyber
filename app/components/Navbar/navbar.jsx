@@ -69,7 +69,7 @@ export default function Navbar() {
                       setIsOpen(false);
                       if (searchInput !== "") {
                         if (!path.includes("products/")) {
-                          router.push("/");
+                          router.push("/products");
                           setTimeout(() => {
                             router.push(`products/search/${searchInput}`);
                           }, 1);
