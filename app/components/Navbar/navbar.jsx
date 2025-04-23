@@ -72,7 +72,7 @@ export default function Navbar() {
                           router.push("/");
                           setTimeout(() => {
                             router.push(`products/search/${searchInput}`);
-                          }, 50);
+                          }, 1);
                           setSearchInput("");
                         } else if (path.includes(`products/search/`)) {
                           router.push(`${searchInput}`);
