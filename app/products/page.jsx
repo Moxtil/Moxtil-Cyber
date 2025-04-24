@@ -118,7 +118,12 @@ export default function page() {
                     showSuccess();
                   }}
                 >
-                  <Button title={"Add To Cart"} width={"100%"} />
+                  <Button
+                    title={"Add To Cart"}
+                    width={"100%"}
+                    color={"#333"}
+                    border={"2px solid #333"}
+                  />
                 </div>
               </div>
             );

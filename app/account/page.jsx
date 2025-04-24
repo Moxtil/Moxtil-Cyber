@@ -40,8 +40,8 @@ export default function page() {
 
   const showInputPopup = async (user) => {
     const { value: inputValue } = await Swal.fire({
-      title: "Enter Your Username To Confirm",
-      text: "You Need To Write It Not Copy It ",
+      title: "Enter Your Email To Confirm",
+      text: "You Need To Write It , Do Not Copy It ",
       input: "text",
       inputPlaceholder: user,
       showCancelButton: true,

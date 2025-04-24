@@ -22,7 +22,7 @@ export default function AddToCartButton({ item }) {
         showSuccess();
       }}
     >
-      <Button title={"Add To Cart"} />
+      <Button color={"#333"} border={"2px solid #333"} title={"Add To Cart"} />
     </div>
   );
 }
