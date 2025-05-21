@@ -1,20 +1,10 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
-import Button from "../Button/button";
 import { MyCartItems } from "@/app/Context/CartContext";
 import Swal from "sweetalert2";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-const showSuccess = () => {
-  Swal.fire({
-    title: "Done!",
-    text: "Item has been added",
-    icon: "success",
-    showConfirmButton: false,
-    timer: 1200,
-  });
-};
 
 export default function AddToFavButton({ item }) {
   const [favoriteIds, setFavoriteIds] = useState([item.id]);

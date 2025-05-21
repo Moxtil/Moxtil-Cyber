@@ -9,6 +9,9 @@ export default function Routing({ children }) {
   const router = useRouter();
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => {
       if (!user) {
         // Redirect to /sign-up if not logged in

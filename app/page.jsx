@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import styles from "./page.module.css";
 import IphoneImg from "./assets/Iphone Image.png";
 import { Instrument_Sans } from "next/font/google";

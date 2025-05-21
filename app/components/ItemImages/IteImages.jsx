@@ -10,8 +10,8 @@ export default function ItemImages({ item }) {
       <Image
         src={mainImg}
         alt={item.title}
-        width={250}
-        height={200}
+        width={450}
+        height={300}
         onClick={() => console.log(item)}
         style={{ opacity: "1", objectFit: "contain" }}
       />
@@ -23,8 +23,8 @@ export default function ItemImages({ item }) {
               key={im}
               src={im}
               alt={item.title}
-              width={80}
-              height={80}
+              width={100}
+              height={100}
               style={
                 mainImg == im
                   ? {

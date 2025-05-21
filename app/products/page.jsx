@@ -83,7 +83,11 @@ export default function page() {
             const isFavorite = favoriteIds.includes(m.id);
 
             return (
-              <div className={styles.cardsContainer} key={m?.id}>
+              <div
+                className={styles.cardsContainer}
+                key={m?.id}
+                data-aos="fade-up"
+              >
                 <div
                   className={styles.cardTop}
                   onClick={async () => {

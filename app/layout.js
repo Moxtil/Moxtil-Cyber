@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar/navbar";
 import AuthProvider from "./Context/AuthContext";
 import Routing from "./Context/routing";
 import CartContext from "./Context/CartContext";
+import AOSProvider from "./Context/AOS";
+import HomeWrapper from "./Context/HomeWrapper";
+import Footer from "./components/Footer/Footer";
 
 const inter = Montserrat({
   subsets: ["latin"],
@@ -21,10 +24,15 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
         <Routing>
           <CartContext>
-            <AuthProvider>
-              <Navbar />
-              {children}
-            </AuthProvider>
+            <AOSProvider>
+              <AuthProvider>
+                <HomeWrapper>
+                  <Navbar />
+                  {children}
+                  <Footer />
+                </HomeWrapper>
+              </AuthProvider>
+            </AOSProvider>
           </CartContext>
         </Routing>
       </body>

@@ -41,7 +41,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container" data-aos="fade-up">
       <h2>Login</h2>
       <form onSubmit={handleSubmit} className="login-form">
         <input
